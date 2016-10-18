@@ -1,5 +1,6 @@
 package com.mycompany.simpleapp;
 
+import com.mycompany.dao.UserAccountFacade;
 import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.annotations.Theme;
@@ -28,10 +29,14 @@ import java.util.Locale;
 @Theme("mytheme")
 @Widgetset("com.mycompany.simpleapp.MyAppWidgetset")
 public class MainUI extends UI {
+    public static final String PERSISTENCE_UNIT = "com.mycompany_simpleapp_war_1.0-SNAPSHOTPU";
     final Button button;
     final VerticalLayout layout;
     private HorizontalLayout mainWindowLayout;
+    private UserAccountFacade userFacade;
     public MainUI(){
+        userFacade=new UserAccountFacade();
+        userFacade.findAll();
         button = new Button("Click Me");
         layout = new VerticalLayout();
         button.addClickListener(new Button.ClickListener() {
@@ -43,12 +48,31 @@ public class MainUI extends UI {
     }
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        mainWindowLayout = new HorizontalLayout();
-        mainWindowLayout.addComponent(getHeaderLabel());
-        setContent(mainWindowLayout);
-        setMainWindowLayout();
+//        mainWindowLayout = new HorizontalLayout();
+//        mainWindowLayout.addComponent(getHeaderLabel());
+//        setContent(mainWindowLayout);
+//        setMainWindowLayout();
+          updateContent();
     }
 
+    /**
+     * Updates the correct content for this UI based on the current user status.
+     * If the user is logged in with appropriate privileges, main view is shown.
+     * Otherwise login view is shown.
+     */
+    private void updateContent() {
+//        User user = (User) VaadinSession.getCurrent()
+//                .getAttribute(User.class.getName());
+//        if (user != null && "admin".equals(user.getRole())) {
+//            // Authenticated user
+//            setContent(new MainView());
+//            removeStyleName("loginview");
+//            getNavigator().navigateTo(getNavigator().getState());
+//        } else {
+            setContent(new LoginLayout());
+            addStyleName("loginview");
+//        }
+}
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = MainUI.class, productionMode = false)
     public static class MyUIServlet extends VaadinServlet {

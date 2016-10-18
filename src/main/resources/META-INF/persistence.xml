@@ -3,10 +3,9 @@
   <persistence-unit name="com.mycompany_simpleapp_war_1.0-SNAPSHOTPU" transaction-type="JTA">
     <jta-data-source>JNDI_Name</jta-data-source>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
             <property name="eclipselink.cache.shared.default" value="false"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://gb-mysql:3306/madrasa?rewriteBatchedStatements=true&amp;characterEncoding=UTF-8&amp;connectionCollation=utf8_general_ci&amp;zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/madrasa?rewriteBatchedStatements=true&amp;characterEncoding=UTF-8&amp;connectionCollation=utf8_general_ci&amp;zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"/>
             <property name="javax.persistence.jdbc.password" value="gbIsgreat"/> 
             
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
