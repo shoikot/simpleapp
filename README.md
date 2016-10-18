@@ -23,16 +23,10 @@ To produce a deployable production mode WAR:
   - See below for more information. Running "mvn clean" removes the pre-compiled theme.
 - test with "mvn jetty:run-war
 
-Using a precompiled theme
+An project For 
 -------------------------
+Baytus Salam Mohammadia Madrasa
+বায়তুস্ সালাম মুহাম্মাদীয়া মাদরাসা
+বঙ্গশাসন, ২৭ নং ওয়ার্ড, নাঃগঞ্জ সিটি করপোরেশন, নারায়নগঞ্জ
+Mobile: 01911787497
 
-When developing the application, Vaadin can compile the theme on the fly when needed,
-or the theme can be precompiled to speed up page loads.
-
-To precompile the theme run "mvn vaadin:compile-theme". Note, though, that once
-the theme has been precompiled, any theme changes will not be visible until the
-next theme compilation or running the "mvn clean" target.
-
-When developing the theme, running the application in the "run" mode (rather than
-in "debug") in the IDE can speed up consecutive on-the-fly theme compilations
-significantly.
