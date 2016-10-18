@@ -23,10 +23,4 @@ To produce a deployable production mode WAR:
   - See below for more information. Running "mvn clean" removes the pre-compiled theme.
 - test with "mvn jetty:run-war
 
-An project For 
--------------------------
-Baytus Salam Mohammadia Madrasa
-বায়তুস্ সালাম মুহাম্মাদীয়া মাদরাসা
-বঙ্গশাসন, ২৭ নং ওয়ার্ড, নাঃগঞ্জ সিটি করপোরেশন, নারায়নগঞ্জ
-Mobile: 01911787497
 
