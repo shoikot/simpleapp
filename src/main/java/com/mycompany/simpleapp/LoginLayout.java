@@ -91,7 +91,7 @@ public class LoginLayout extends VerticalLayout {
         welcome.addStyleName(ValoTheme.LABEL_COLORED);
         labels.addComponent(welcome);
 
-        Label title = new Label("Baytus Salam Mohammadia Madrasa <br /> ");
+        Label title = new Label("Baytus Salam Mohammadia Madrasa <br />Baytus Salam Mohammadia Madrasa বায়তুস্ সালাম মুহাম্মাদীয়া মাদরাসা বঙ্গশাসন, ২৭ নং ওয়ার্ড, নাঃগঞ্জ সিটি করপোরেশন, নারায়নগঞ্জ Mobile: 01911787497 ");
         title.setSizeUndefined();
         title.addStyleName(ValoTheme.LABEL_H3);
         title.addStyleName(ValoTheme.LABEL_LIGHT);
