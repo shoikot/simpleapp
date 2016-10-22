@@ -8,6 +8,7 @@ package com.mycompany.simpleapp;
 import com.vaadin.event.ShortcutAction.KeyCode;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.server.Responsive;
+import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
@@ -85,13 +86,13 @@ public class LoginLayout extends VerticalLayout {
         CssLayout labels = new CssLayout();
         labels.addStyleName("labels");
 
-        Label welcome = new Label("Welcome");
-        welcome.setSizeUndefined();
-        welcome.addStyleName(ValoTheme.LABEL_H4);
-        welcome.addStyleName(ValoTheme.LABEL_COLORED);
-        labels.addComponent(welcome);
+//        Label welcome = new Label("Welcome");
+//        welcome.setSizeUndefined();
+//        welcome.addStyleName(ValoTheme.LABEL_H4);
+//        welcome.addStyleName(ValoTheme.LABEL_COLORED);
+//        labels.addComponent(welcome);
 
-        Label title = new Label("Baytus Salam Mohammadia Madrasa <br />Baytus Salam Mohammadia Madrasa বায়তুস্ সালাম মুহাম্মাদীয়া মাদরাসা বঙ্গশাসন, ২৭ নং ওয়ার্ড, নাঃগঞ্জ সিটি করপোরেশন, নারায়নগঞ্জ Mobile: 01911787497 ");
+        Label title = new Label("<h1>Baytus Salam Mohammadia Madrasa </h1> ", ContentMode.HTML);
         title.setSizeUndefined();
         title.addStyleName(ValoTheme.LABEL_H3);
         title.addStyleName(ValoTheme.LABEL_LIGHT);

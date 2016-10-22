@@ -3,4 +3,30 @@
         "http://google-web-toolkit.googlecode.com/svn/tags/2.5.1/distro-source/core/src/gwt-module.dtd">
 <module>
     <inherits name="com.vaadin.DefaultWidgetSet"/>
+
+    <inherits name="org.vaadin.risto.stepper.widgetset.StepperWidgetset" />
+
+    <inherits name="org.vaadin.peter.buttongroup.ButtonGroupWidgetset" />
+
+    <inherits name="com.wcs.wcslib.vaadin.widget.multifileupload.MultiFileUploadWidgetSet" />
+
+    <inherits name="de.steinwedel.messagebox.WidgetSet" />
+
+    <inherits name="org.vaadin.sliderpanel.WidgetSet" />
+
+    <inherits name="org.vaadin.openesignforms.ckeditor.widgetset.VaadinCKEditorWidgetset" />
+
+    <inherits name="org.vaadin.hene.popupbutton.widgetset.PopupbuttonWidgetset" />
+
+    <inherits name="org.vaadin.tepi.imageviewer.widgetset.ImageViewerWidgetset" />
+
+    <inherits name="org.tepi.filtertable.gwt.FilterTableWidgetset" />
+
+    <inherits name="org.dussan.vaadin.dcharts.DchartsWidgetset" />
+
+    <inherits name="org.vaadin.jouni.animator.AnimatorWidgetset" />
+
+    <inherits name="org.vaadin.peter.imagestrip.ImageStripApplicationWidgetset" />
+
+    <inherits name="org.vaadin.jouni.dom.DomWidgetset" />
 </module>
