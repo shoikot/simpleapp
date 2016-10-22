@@ -27,6 +27,15 @@ public class CashAccount implements Serializable {
 
     private double balance;
 
+    private double test ;
+
+    public double getTest() {
+        return test;
+    }
+
+    public void setTest(double test) {
+        this.test = test;
+    }
     /**
      * Get the value of balance
      *

@@ -49,7 +49,7 @@ public final class DashboardUI extends UI {
         Responsive.makeResponsive(this);
         //addStyleName(ValoTheme.UI_WITH_MENU);
 
-        updateContent();
+        showLoginView();
 
         // Some views need to be aware of browser resize events so a
         // BrowserResizeEvent gets fired to the event bus on every occasion.
@@ -69,19 +69,23 @@ public final class DashboardUI extends UI {
      * Otherwise login view is shown.
      */
     private void updateContent() {
-        User user = (User) VaadinSession.getCurrent().getAttribute(
-                User.class.getName());
-        if (user != null && "admin".equals(user.getRole())) {
-            // Authenticated user
+//        User user = (User) VaadinSession.getCurrent().getAttribute(
+//                User.class.getName());
+//        if (user != null && "admin".equals(user.getRole())) {
+//             Authenticated user
             setContent(new MainView());
             removeStyleName("loginview");
             getNavigator().navigateTo(getNavigator().getState());
-        } else {
-            setContent(new LoginView());
-            addStyleName("loginview");
-        }
+//        } else {
+//            setContent(new LoginView());
+//            addStyleName("loginview");
+//        }
     }
 
+    public  void showLoginView(){
+            setContent(new LoginView());
+            addStyleName("loginview");
+    }
     @Subscribe
     public void userLoginRequested(final UserLoginRequestedEvent event) {
 //        User user = getDataProvider().authenticate(event.getUserName(),
