@@ -164,10 +164,10 @@ public final class DashboardView extends Panel implements View,
         dashboardPanels.addStyleName("dashboard-panels");
         Responsive.makeResponsive(dashboardPanels);
 
-        dashboardPanels.addComponent(buildTopGrossingMovies());
-        dashboardPanels.addComponent(buildNotes());
-        dashboardPanels.addComponent(buildTop10TitlesByRevenue());
-        dashboardPanels.addComponent(buildPopularMovies());
+//        dashboardPanels.addComponent(buildTopGrossingMovies());
+//        dashboardPanels.addComponent(buildNotes());
+//        dashboardPanels.addComponent(buildTop10TitlesByRevenue());
+//        dashboardPanels.addComponent(buildPopularMovies());
 
         return dashboardPanels;
     }
@@ -189,9 +189,7 @@ public final class DashboardView extends Panel implements View,
     }
 
     private Component buildTop10TitlesByRevenue() {
-        Component contentWrapper = createContentWrapper(new TopTenMoviesTable());
-        contentWrapper.addStyleName("top10-revenue");
-        return contentWrapper;
+       return new Label();
     }
 
     private Component buildPopularMovies() {

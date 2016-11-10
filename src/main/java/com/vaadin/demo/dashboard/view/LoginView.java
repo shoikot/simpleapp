@@ -43,9 +43,9 @@ public class LoginView extends VerticalLayout {
         setComponentAlignment(loginForm, Alignment.MIDDLE_CENTER);
 
         Notification notification = new Notification(
-                "Welcome to Ardites Bangladesh Ltd.");
+                "Welcome to Baytus Salam Mohammadia Madrasa.");
         notification
-                .setDescription("<span>No username or password is required, just click the <b>Sign In</b> button to continue.</span>");
+                .setDescription("<span>Word no 27, Narayangonj City Corporation, Narayangonj Mobile: 01911787497</span>");
         notification.setHtmlContentAllowed(true);
         notification.setStyleName("tray dark small closable login-help");
         notification.setPosition(Position.BOTTOM_CENTER);
@@ -62,12 +62,12 @@ public class LoginView extends VerticalLayout {
         Image logo=new Image();
         logo.addStyleName("primaryLogo");
         String basepath = VaadinService.getCurrent().getBaseDirectory().getAbsolutePath();
-        logo.setSource(new FileResource(new File(basepath+"/WEB-INF/images/footer-logo.svg")));
+        logo.setSource(new FileResource(new File(basepath+"/WEB-INF/images/footer-logo.jpg")));
         logo.setWidth("300px");
         loginPanel.addComponent(buildLabels());
         loginPanel.addComponent(logo);
         loginPanel.addComponent(buildFields());
-        loginPanel.addComponent(new CheckBox("Remember me", true));
+//        loginPanel.addComponent(new CheckBox("Remember me", true));
         return loginPanel;
     }
 
@@ -95,7 +95,7 @@ public class LoginView extends VerticalLayout {
         signin.addClickListener(new ClickListener() {
             @Override
             public void buttonClick(final ClickEvent event) {
-                DashboardEventBus.post(new UserLoginRequestedEvent(username.getValue(), password.getValue()));
+                DashboardEventBus.post(new UserLoginRequestedEvent("", ""));
             }
         });
         return fields;
@@ -111,7 +111,7 @@ public class LoginView extends VerticalLayout {
         welcome.addStyleName(ValoTheme.LABEL_COLORED);
         labels.addComponent(welcome);
 
-        Label title = new Label("Talkpool Dashboard");
+        Label title = new Label("Baytus Salam Mohammadia Madrasa Dashboard");
         title.setSizeUndefined();
         title.addStyleName(ValoTheme.LABEL_H3);
         title.addStyleName(ValoTheme.LABEL_LIGHT);

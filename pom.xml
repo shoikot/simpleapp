@@ -154,12 +154,6 @@
             <artifactId>imageviewer</artifactId>
             <version>0.5.1.v7</version>
         </dependency>
-        <dependency>
-            <groupId>11</groupId>
-            <artifactId>12</artifactId>
-            <version>1</version>
-            <type>jar</type>
-        </dependency>
 
         <dependency>
             <groupId>commons-net</groupId>

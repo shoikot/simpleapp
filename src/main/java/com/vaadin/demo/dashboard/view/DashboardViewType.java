@@ -1,5 +1,9 @@
 package com.vaadin.demo.dashboard.view;
 
+import com.simpleap.inventory.InventoryView;
+import com.simpleapp.print.PrintingView;
+import com.simpleapp.setting.SettingsView;
+import com.simpleapp.setting.UsersView;
 import com.vaadin.demo.dashboard.view.dashboard.DashboardView;
 import com.vaadin.demo.dashboard.view.reports.ReportsView;
 //import com.vaadin.demo.dashboard.view.sales.SalesView;
@@ -10,10 +14,14 @@ import com.vaadin.server.FontAwesome;
 import com.vaadin.server.Resource;
 
 public enum DashboardViewType {
-    DASHBOARD("dashboard", DashboardView.class, FontAwesome.HOME, true), TRANSACTIONS(
-            "transactions", TransactionsView.class, FontAwesome.TABLE, false), REPORTS(
-            "reports", ReportsView.class, FontAwesome.FILE_TEXT_O, true), SCHEDULE(
-            "schedule", ScheduleView.class, FontAwesome.CALENDAR_O, false);
+    DASHBOARD("dashboard", DashboardView.class, FontAwesome.HOME, true), 
+    TRANSACTIONS("transactions", TransactionsView.class, FontAwesome.TABLE, false), 
+    REPORTS( "reports", ReportsView.class, FontAwesome.FILE_TEXT_O, true),
+    SCHEDULE("schedule", ScheduleView.class, FontAwesome.CALENDAR_O, false),
+    INVENTORY("Accounts", InventoryView.class, FontAwesome.CALENDAR_O, false),
+    PRINTING("Printing", PrintingView.class, FontAwesome.PRINT, false),
+    SETTINGS("Settings", SettingsView.class, FontAwesome.COG, false),
+    USERS("Users", UsersView.class, FontAwesome.USERS, false);
 
     private final String viewName;
     private final Class<? extends View> viewClass;
